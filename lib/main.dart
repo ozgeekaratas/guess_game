@@ -57,7 +57,9 @@ class MyHomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ac.gameStatus == GameStatus.finished ? congrats(ac.guessCount) : Container(),
+            ac.gameStatus == GameStatus.finished
+                ? congrats(ac.guessCount)
+                : Container(),
             startButton,
             SizedBox(
               width: double.infinity,
@@ -82,7 +84,9 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             gs == GameStatus.up ? const Icon(Icons.arrow_upward) : Container(),
-            gs == GameStatus.down ? const Icon(Icons.arrow_downward) : Container(),
+            gs == GameStatus.down
+                ? const Icon(Icons.arrow_downward)
+                : Container(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -91,7 +95,8 @@ class MyHomePage extends StatelessWidget {
                     focusNode: focusNode,
                     keyboardType: TextInputType.number,
                     controller: textController,
-                    decoration: InputDecoration(label: Text("Tahmininizi girin")),
+                    decoration:
+                        InputDecoration(label: Text("Tahmininizi girin")),
                   ),
                 ),
                 IconButton(
